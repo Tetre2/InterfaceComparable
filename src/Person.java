@@ -27,8 +27,20 @@ public class Person implements Comparable<Person>{
 	
 	@Override
 	public int compareTo(Person o) {
-		// TODO Auto-generated method stub
-		return 0;
+
+		String srg1 = fName.substring(2);
+		String srg2 = lName.substring(2);
+				
+		if(srg2.compareTo(o.lName) == 0){
+			
+			return srg1.compareTo(o.fName);
+			
+		}else{
+			
+			return srg1.compareTo(o.lName);
+			
+		}
+
 	}
 	
 	
