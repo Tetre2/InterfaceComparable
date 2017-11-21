@@ -1,5 +1,5 @@
 
-public class Person {
+public class Person implements Comparable<Person>{
 
 	String fName;
 	String lName;
@@ -18,12 +18,18 @@ public class Person {
 		}
 		
 		this.fName = fullName.substring(index + 1);
-		this.lName = fullName.substring(0, index-1);
+		this.lName = fullName.substring(0, index);
 		
 		
 		
 	}
 	
+	
+	@Override
+	public int compareTo(Person o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	
 	
@@ -44,6 +50,13 @@ public class Person {
 	public void setlName(String lName) {
 		this.lName = lName;
 	}
+
+
+
+
+
+
+	
 	
 	
 	
