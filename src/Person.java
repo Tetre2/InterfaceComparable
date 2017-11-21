@@ -28,8 +28,8 @@ public class Person implements Comparable<Person>{
 	@Override
 	public int compareTo(Person o) {
 
-		String srg1 = fName.substring(2);
-		String srg2 = lName.substring(2);
+		String srg1 = fName.substring(0,2);
+		String srg2 = lName.substring(0,2);
 				
 		if(srg2.compareTo(o.lName) == 0){
 			
@@ -45,7 +45,9 @@ public class Person implements Comparable<Person>{
 	
 	
 	
-	
+	public String getFullName() {
+		return lName + " " + fName;
+	}
 
 	public String getfName() {
 		return fName;
